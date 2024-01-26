@@ -1,0 +1,57 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: #000000;
+    background: -webkit-linear-gradient(0deg, #000000 0%, #ff47c1 100%);
+    background: linear-gradient(0deg, #000000 0%, #ff47c1 100%);
+    color: #000000; 
+    padding: 20px;
+}
+
+.container {
+    background-color: whitesmoke;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #ff1493; 
+    font-family: 'Your Calligraphy Font', cursive; 
+}
+
+h2 {
+    color: #ff1493; 
+    font-family: 'Your Calligraphy Font', cursive; 
+}
+
+p {
+    color: #6c757d;
+}
+
+.category-box {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.category-box:hover {
+    transform: scale(1.05);
+}
+
+.btn-custom {
+    background-color: #000000;
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #ffffff; 
+    color: #000000; 
+}

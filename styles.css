@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #000000;
+background: -webkit-linear-gradient(0deg, #000000 0%, #ff47c1 100%);
+background: linear-gradient(0deg, #000000 0%, #ff47c1 100%);
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+
+nav {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 35px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: .2em 2em;
+  float: right;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0;
+  padding: .2em .7em;
+  background-color: #ff47c1;
+  border-radius: 5px;
+}
+
+nav a {
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-decoration: none;
+  font-family: Ubuntu;
+  font-size: 1.15em;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  transition: .25s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav a:hover {
+  color: rgb(220, 120, 0);
+}
+
+.nav-bg {
+  content: '';
+  position: absolute;
+  display: block;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: rgb(50, 50, 50);
+  transition: .45s ease-in-out;
+}
+
+.bg-hidden {
+  top: -100%;
+  opacity: 0;
+}
+
+.bg-visible {
+  top: 0;
+  opacity: 1;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background: rgb(50, 50, 50);
+  background: url(top.png) no-repeat 50% 50% fixed;
+  background-size: 130%;
+  overflow: hidden;
+}
+
+.content-wrapper {
+  width: 80%;
+  padding: 2em 10%;
+  margin: auto;
+  overflow: hidden;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.content-wrapper:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.about-me, .skills {
+  background-color: pink;
+  color: black;
+  padding: 1.5em;
+  margin: 2em 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  font-family: Ubuntu;
+  letter-spacing: 1px;
+}
+
+p {
+  text-indent: 1.5em;
+}
+.wrapper {
+  height: 10vh;
+  display: grid;
+  place-items: center;
+}
+
+.typing-demo {
+  width: 22ch;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}

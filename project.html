@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="project.css">
+    <title> Projects | Portfolio</title>
+</head>
+<body>
+    <div class="navigation">
+        <button onclick="location.href='index.html'">Home</button>
+        <button onclick="location.href='contact.html'">Contact</button>
+        <button onclick="location.href='about.html'">About</button>
+    </div>
+    
+    <ul class="gallery">
+        <li>
+            <div class="picture-holder">
+                <img src="proj1.jpg">
+            </div>
+            <div class="text-holder">
+                <h3>Project 1</h3>
+                <p>Embarking on my initial project, I decided to craft a special gift for my closest female friend. This endeavor marked my foray into web development, where I delved into experimentation and explored various elements to fashion a unique webpage. It was a journey of discovery, a canvas where I could express my creativity and showcase my growing skills in this realm. The project, though born out of curiosity, turned into a heartfelt gesture for my dear friend, blending the joy of learning with the warmth of friendship.</p>
+            </div>
+            <button class="view-button">View</button>
+        </li>
+        <li>
+            <div class="picture-holder"><img src="proj2.jpg"></div>
+            <div class="text-holder">
+                <h3>Project 2</h3>
+                <p>For my second project, I created a simple tool to guide me through my daily activities and boost my productivity. It serves as a personal tracker, helping me stay organized and focused on tasks throughout the day. The main goal is to enhance efficiency and ensure I make the most out of my time. This project is a practical solution to streamline my routine and cultivate a more productive lifestyle.</p>
+            </div>
+            <button class="view-button">View</button>
+        </li>
+        <li>
+            <div class="picture-holder"><img src="proj3.jpg"></div>
+            <div class="text-holder">
+                <h3>Project 3</h3>
+                <p>For my third project, I decided to create something special to lift the spirits of my friend. It's a simple yet heartfelt gesture aimed at bringing a smile to her face. I believe in the power of small acts of kindness, and this project is my way of spreading joy and positivity. It's amazing how a little effort can go a long way in brightening someone's day. In a world that can sometimes feel overwhelming, finding joy in simplicity is essential. So, this project is not just about crafting something visually appealing; it's about creating a positive impact and sharing happiness with those around me.</p>
+            </div>
+            <button class="view-button">View</button>
+        </li>
+    </ul>
+
+    <script type="text/javascript">
+        const slider = document.querySelector('.gallery');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener('mousedown', e => {
+            isDown = true;
+            slider.classList.add('active');
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+        slider.addEventListener('mouseleave', _ => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+        slider.addEventListener('mouseup', _ => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+        slider.addEventListener('mousemove', e => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const SCROLL_SPEED = 3;
+            const walk = (x - startX) * SCROLL_SPEED;
+            slider.scrollLeft = scrollLeft - walk;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title> Mariejoe Diamzon | Portfolio</title>
+</head>
+<nav>
+    <div class="nav-bg"></div>
+    <ul>
+      <li><a href="about.html">About me</a></li>
+      <li><a href="project.html">Projects</a></li>
+      <li><a href="contact.html">Connect with me</a></li>
+    </ul>
+  </nav>
+  <div class="hero"></div>
+  <div class="content-wrapper">
+    <div class="wrapper">
+    <div class="typing-demo">
+      Mariejoe B. Diamzon.</div>
+</div>
+    <div class="about-me">
+      <h2>About Me</h2>
+      <p>I'm a 20-year-old computer science student from Cavite State University CCAT, originally born in Dubai, UAE. With a passion for technology and big dreams of becoming a successful software engineer, I dedicate 8 hours a day to my studies. My commitment to excellence is reflected in my trailhead account, where I've gained knowledge in Salesforce. As a student, I strive to be known for my unique mind and powerful insights, using words to share my computer-related knowledge in an easy-to-understand manner. My goal is to be recognized as the best student, consistently delivering unique and precise answers.In the pursuit of my goals, I immerse myself in the world of computer science, dedicating significant time to reading and watching movies for both relaxation and inspiration. I believe that being well-rounded contributes to a unique perspective, enriching my understanding of the subjects. Beyond the classroom, I am actively engaged in the Trailhead community, honing my skills in Salesforce, which I view as a valuable asset in the ever-evolving tech landscape.
+    Balancing formal education with practical experience, I aim to stand out not just as a student but as a future software engineer. The combination of my academic endeavors, passion for technology, and hands-on experience positions me to achieve success in this dynamic field. I am on a journey to become the best version of myself, armed with a distinctive mindset and a determination to leave a mark in the world of software engineering.</p>
+
+    <a href="about.html">Click here know more!</a>
+    </div>
+    
+    <div class="skills">
+      <h2>Skills</h2>
+<ul>
+        <li><strong>Programming Proficiency:</strong> Adept in languages like Java, C++, HTML, CSS, JavaScript and Python, facilitating efficient code development.</li>
+        <li><strong>Salesforce Expertise:</strong> Acquired through Trailhead, a solid grasp of Salesforce administration and development.</li>
+        <li><strong>Problem-Solving:</strong> Skillful at analyzing and resolving complex issues, a crucial trait in software engineering.</li>
+        <li><strong>Effective Communication:</strong> Able to convey intricate technical concepts in a straightforward and understandable manner.</li>
+        <li><strong>Time Management:</strong> Excelling in an 8-hour academic schedule, showcasing strong organizational and time management skills.</li>
+        <li><strong>Adaptability:</strong> Quick to adapt to new tools, languages, and methodologies in the rapidly evolving tech landscape.</li>
+        <li><strong>Team Collaboration:</strong> Experienced in collaborative project work, emphasizing effective communication and teamwork.</li>
+        <li><strong>Critical Thinking:</strong> Possessing a unique mindset for strategic and critical thinking, contributing to innovative problem-solving.</li>
+        <li><strong>Self-Motivation:</strong> Intrinsic drive and commitment to personal and professional growth in the field of computer science.</li>
+        <li><strong>Ambitious Vision:</strong> Aspiring to become a successful software engineer, with a focus on achieving significant career milestones.</li>
+    </ul>
+
+    </div>
+    
+    
+  </div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+   $(window).on('scroll', function() {
+    if($(window).scrollTop() < 1000) {
+      $('.hero').css('background-size', 130 + parseInt($(window).scrollTop() / 5) + '%');
+      $('.hero h1').css('top', 50 + ($(window).scrollTop() * .1) + '%');
+      $('.hero h1').css('opacity', 1 - ($(window).scrollTop() * .003));
+    }
+     
+     if($(window).scrollTop() >= $('.content-wrapper').offset().top - 300) {
+       $('.nav-bg').removeClass('bg-hidden');
+       $('.nav-bg').addClass('bg-visible');
+     } else {
+       $('.nav-bg').removeClass('bg-visible');
+       $('.nav-bg').addClass('bg-hidden');
+     }
+  });
+});
+</script>
+</body>
+</html>
