@@ -56,7 +56,6 @@ p {
     color: #000000; 
 }
 
-
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 
 :root {
@@ -432,10 +431,10 @@ ul.skills li.sk-pug { --per: 40; }
 }
 
 label[for="sk1"] {
-  /*left: -10px;*/
+
 }
 label[for="sk2"] {
-  /*left: calc(34% - 6px);*/
+
 }
 
 
